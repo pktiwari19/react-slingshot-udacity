@@ -23,7 +23,7 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - "npm-packages:
+            - "npm-packages"
       - run: npm i
       - run: npm run test
   analyze:
@@ -33,7 +33,7 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - "npm-packages:
+            - "npm-packages"
       - run: npm audit
 
 # Invoke jobs via workflows
