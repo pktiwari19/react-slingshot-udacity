@@ -42,9 +42,9 @@ workflows:
   npm-ci-workflow:
     jobs:
       - build
-      - test
+      - test:
           requires:
             - build
-      - analyze
+      - analyze:
           requires:
             - test
